@@ -1,20 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="/css/style.css') }}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+    body {background-color: #EBEFF9;}
+</style>
     <meta charset="UTF-8">
-    <title>Ruth's blog</title>
+    <title>Ruth's Space</title>
 </head>
 <body>
-<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
+<div class="page-header">
+    <h1><a href="/">Hi, I'm Ruth</a></h1>
 </div>
 
 {% for post in posts %}
-    <div>
+<div class="post">
         <p>published: {{ post.published_date }}</p>
         <h2><a href="">{{ post.title }}</a></h2>
         <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+</div>
 {% endfor %}
 
 
